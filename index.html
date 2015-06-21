@@ -1,0 +1,26 @@
+<!doctype html>
+<html ng-app="wikip">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="http://code.angularjs.org/1.4.1/angular.min.js"></script>
+    <script src="wikip.js"></script>
+      <style type="text/css">
+      .result{
+        background: #f3f3f3;
+        max-width: 700px;
+      }
+      </style>
+  </head>
+  <body>
+    <div ng-controller="WikipController as wikip">
+      <b>Wikipediaの序文を表示</b>
+      <div>
+        <input type="text" ng-model="wikip.keyword" required >
+        <button class="btn" ng-click="wikip.go()">表示</button>
+      </div>
+      <div class="result">        
+        {{wikip.body}}
+      </div>
+    </div>
+  </body>
+</html>
